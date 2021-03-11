@@ -1,0 +1,78 @@
+body {
+    --yellow: #fff500; 
+    background-color: gray;
+    margin: 0px;
+    margin-top: 5px;
+}
+.subline {
+    display: flex;
+    align-items: center;
+    font-family: 'gtfxebo';
+    font-size: 47px;
+  
+    border-top: 7px solid var(--yellow);
+    border-bottom: 7px solid var(--yellow);
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.sliding-headline {
+      white-space: nowrap;
+      animation: slideLeft 40s infinite linear reverse;
+}
+.sliding-headline span {
+        margin-right: 0.1em;
+}
+span:nth-child(2n) {
+    color: var(--yellow);
+}
+span:nth-child(2n+1) {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--yellow);
+}
+
+@keyframes slideLeft {
+    0% {
+      transform: translate3d(0, 0, 0);
+}
+  
+    100% {
+      transform: translate3d(-100%, 0, 0);
+    }
+}
+.container
+{
+    margin: 20px;
+}
+
+table
+{
+    background-color: rgba(194, 194, 194, 0.71);
+    width: 100%;
+    text-align: left;
+}
+.tableHead
+{
+    background-color: rgba(109, 109, 109, 0.81);
+}
+table, th {
+    border: 2px solid black;
+}
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('/cf.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+.stopfade { 
+   opacity: .5;
+}
